@@ -8,11 +8,11 @@
 name: X64-1907
 
 on:
-  schedule:
-    - cron: 0 8 * * 5
+#  schedule:
+#    - cron: 0 8 * * 5
   push:
-#    branches: 
-#      - master
+    branches: 
+      - master
     paths:
        - 'x64-1907'
 
@@ -70,6 +70,28 @@ jobs:
           cd openwrt
           make defconfig
 
+
+
+
+
+    - name: Assemble artifact1
+      run: |
+            tar czvf openwrt.tar.gz openwrt
+            rm -rf ./artifact1/
+            mkdir -p ./artifact1/
+            mv openwrt.tar.gz ./artifact1/
+            zip -r artifact1.zip ./artifact1/
+    - name: Upload artifact1
+      uses: actions/upload-artifact@master
+      with:
+        name: OpenWrt firmware code
+        path: ./artifact1/
+
+
+
+
+
+
     - name: Make download
       run: |
           cd openwrt
@@ -100,5 +122,5 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: OpenWrt firmware
+        name: OpenWrt firmware bin
         path: ./artifact/
