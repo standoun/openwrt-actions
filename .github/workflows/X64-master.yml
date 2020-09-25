@@ -8,9 +8,9 @@
 name: X64-master
 
 on:
-#  schedule:
+  schedule:
 #    - cron: 0 8 * * 5
-#  push:
+  push:
 #    branches: 
 #      - master
 #     paths:
