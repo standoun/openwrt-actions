@@ -8,13 +8,13 @@
 name: X64-1907
 
 on:
- schedule:
-   - cron: 0 8 * * 5
   push:
     branches: 
       - master
     paths:
-       - 'x64-1907'
+      - 'x64-1907'
+  # schedule:
+  #   - cron: 0 8 * * 5       
 
 jobs:
   build:
