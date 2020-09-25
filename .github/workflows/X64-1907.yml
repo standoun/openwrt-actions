@@ -70,9 +70,6 @@ jobs:
           cd openwrt
           make defconfig
 
-
-
-
     - name: Assemble artifact1
       run: |
             tar czvf openwrt.tar.gz openwrt
@@ -85,8 +82,6 @@ jobs:
       with:
         name: OpenWrt firmware code
         path: ./artifact1/
-
-
 
 
     - name: Make download
