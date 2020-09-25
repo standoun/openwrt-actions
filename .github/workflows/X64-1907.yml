@@ -8,8 +8,8 @@
 name: X64-1907
 
 on:
-#  schedule:
-#    - cron: 0 8 * * 5
+ schedule:
+   - cron: 0 8 20 * *
   push:
     branches: 
       - master
