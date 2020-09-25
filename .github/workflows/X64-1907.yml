@@ -73,7 +73,6 @@ jobs:
 
 
 
-
     - name: Assemble artifact1
       run: |
             tar czvf openwrt.tar.gz openwrt
@@ -86,7 +85,6 @@ jobs:
       with:
         name: OpenWrt firmware code
         path: ./artifact1/
-
 
 
 
