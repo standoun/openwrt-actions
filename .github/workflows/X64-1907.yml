@@ -12,7 +12,7 @@ on:
     branches: 
       - master
     paths:
-      - 'x64-1907'
+      - '.github/workflows/x64-1907.yml'
   # schedule:
   #   - cron: 0 8 * * 5       
 
