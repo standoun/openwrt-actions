@@ -13,6 +13,7 @@ on:
       - master
     paths:
       - '.github/workflows/x64-1907.yml'
+      - 'x64-1907'
   # schedule:
   #   - cron: 0 8 * * 5       
 
