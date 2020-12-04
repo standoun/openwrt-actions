@@ -1664,7 +1664,6 @@ CONFIG_PACKAGE_ipv6helper=y
 # CONFIG_PACKAGE_k3wifi is not set
 # CONFIG_PACKAGE_libjose is not set
 # CONFIG_PACKAGE_tang is not set
-CONFIG_PACKAGE_wireguard-tools=y
 
 #
 # Firmware
@@ -6328,6 +6327,7 @@ CONFIG_PACKAGE_softethervpn5-server=y
 # CONFIG_PACKAGE_vpnc is not set
 # CONFIG_PACKAGE_vpnc-scripts is not set
 # CONFIG_PACKAGE_wireguard is not set
+CONFIG_PACKAGE_wireguard-tools=y
 # CONFIG_PACKAGE_xl2tpd is not set
 CONFIG_PACKAGE_zerotier=y
 
