@@ -48,12 +48,19 @@ jobs:
 
     - name: Add OpenClash
       run: |
-        git clone -b master https://github.com/vernesong/OpenClash.git 
-        mv OpenClash/luci-app-openclash openwrt/package
-        #cd openwrt/package/base-files/files
-        #mkdir -p etc/openclash/core && cd etc/openclash/core
-        #curl -L https://github.com/vernesong/OpenClash/releases/download/Clash/clash-linux-armv8.tar.gz | tar zxf -
-        #chmod +x clash
+            cd openwrt
+            mkdir package/luci-app-openclash
+            cd package/luci-app-openclash
+            git init
+            git remote add -f origin https://github.com/vernesong/OpenClash.git
+            git config core.sparsecheckout true
+            echo "luci-app-openclash" >> .git/info/sparse-checkout
+            git pull origin master
+            git branch --set-upstream-to=origin/master master
+
+            pushd luci-app-openclash/tools/po2lmo
+            make && sudo make install
+            popd
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
